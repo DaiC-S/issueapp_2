@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Post your issue</title>
+</head>
+<body>
+<form th:action="@{/issues}" th:method="post" th:object="${issueForm}">
+   <input type="text" th:field="*{title}">
+    <textarea th:field="*{content}"></textarea>
+    <input type="date" th:field="*{deadline}">
+    <input type="text" th:field="*{priority}">
+   <button type="submit">Post</button>
+</form>
+</body>
+</html>
