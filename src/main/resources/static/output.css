@@ -544,15 +544,54 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.bg-\[\#2c3e50\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(44 62 80 / var(--tw-bg-opacity));
+}
+
+.text-center {
+  text-align: center;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-bold {
   font-weight: 700;
 }
 
+.leading-normal {
+  line-height: 1.5;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .underline {
+  text-decoration-line: underline;
+}
+
+.no-underline {
+  text-decoration-line: none;
+}
+
+.hover\:underline:hover {
   text-decoration-line: underline;
 }

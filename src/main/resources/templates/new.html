@@ -3,14 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Post your issue</title>
+    <link href="output.css" rel="stylesheet">
 </head>
 <body>
-<form th:action="@{/issues}" th:method="post" th:object="${issueForm}">
-   <input type="text" th:field="*{title}">
-    <textarea th:field="*{content}"></textarea>
-    <input type="date" th:field="*{deadline}">
-    <input type="text" th:field="*{priority}">
-   <button type="submit">Post</button>
-</form>
+<header class="w-full h-14 leading-normal text-center bg-[#2c3e50]">
+    <a th:href="@{/}" class="text-base text-white no-underline hover:underline">IssueApp2</a>
+</header>
+<main>
+    <div class="form_head ">
+        <h1>Fill in!</h1>
+    </div>
+    <div class="form_body">
+        <form th:action="@{/issues}" th:method="post" th:object="${issueForm}">
+            <div  class="form_title">
+                <label for="title">Title</label>
+                <input type="text" th:field="*{title}">
+            </div>
+            <div  class="form_content">
+                <label for="content">What?</label>
+                <textarea th:field="*{content}"></textarea>
+            </div>
+            <div  class="form_date">
+                <label for="deadline">Deadline</label>
+                <input type="date" th:field="*{deadline}">
+            </div>
+            <div  class="form_priority">
+                <label for="priority">Priority</label>
+                <input type="text" th:field="*{priority}">
+            </div>
+            <div  class="form_submit">
+                <button type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+</main>
 </body>
 </html>
