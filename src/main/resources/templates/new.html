@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Post your issue</title>
-    <link href="output.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-<header class="w-full h-14 leading-normal text-center bg-[#2c3e50]">
-    <a th:href="@{/}" class="text-base text-white no-underline hover:underline">IssueApp2</a>
+<header class="w-full h-14 py-3 text-center bg-[#2c3e50]">
+    <a th:href="@{/}" class="text-xl text-white no-underline">IssueApp2</a>
 </header>
-<main>
-    <div class="form_head ">
-        <h1>Fill in!</h1>
+<main class="w-full">
+    <div class="form_head w-[500px] py-12 my-0 mx-auto">
+        <h1 class="text-2xl font-bold text-center">Fill in!</h1>
     </div>
-    <div class="form_body">
-        <form th:action="@{/issues}" th:method="post" th:object="${issueForm}">
+    <div class="form_body w-[500px] py-8 px-5 mt-0 mx-auto mb-12 border border-solid border-[#e3e7e8] rounded">
+        <form th:action="@{/issues}" th:method="post" th:object="${issueForm}" class="">
             <div  class="form_title">
-                <label for="title">Title</label>
-                <input type="text" th:field="*{title}">
+                <label for="title" class="column-title mb-1.5 text-lg font-bold">Title</label>
+                <input type="text" th:field="*{title}" class="w-full h-12 p-1 mb-8 border-2 border-solid border-[#222222] rounded">
             </div>
             <div  class="form_content">
-                <label for="content">What?</label>
-                <textarea th:field="*{content}"></textarea>
+                <label for="content" class="column-title mb-1.5 text-lg font-bold">What?</label>
+                <textarea th:field="*{content}" class="w-full h-36 p-1 mb-8 border-2 border-solid border-[#222222] rounded"></textarea>
             </div>
             <div  class="form_date">
-                <label for="deadline">Deadline</label>
-                <input type="date" th:field="*{deadline}">
+                <label for="deadline" class="column-title mb-1.5 text-lg font-bold">Deadline</label>
+                <input type="date" th:field="*{deadline}" class="w-full h-12 p-1 mb-8 border-2 border-solid border-[#222222] rounded">
             </div>
             <div  class="form_priority">
-                <label for="priority">Priority</label>
-                <input type="text" th:field="*{priority}">
+                <label for="priority" class="column-title mb-1.5 text-lg font-bold">Priority</label>
+                <input type="text" th:field="*{priority}" placeholder="Ex：A, B, C.." class="w-full h-12 p-1 mb-16 border-2 border-solid border-[#222222] rounded" >
             </div>
             <div  class="form_submit">
-                <button type="submit">Post</button>
+                <button type="submit" class="h-16 w-full rounded bg-[#2c3e50] text-white text-lg">Post</button>
             </div>
         </form>
     </div>
