@@ -578,6 +578,10 @@ video {
   margin-top: 0px;
 }
 
+.table {
+  display: table;
+}
+
 .h-12 {
   height: 3rem;
 }

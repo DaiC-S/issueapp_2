@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link href="output.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-<h1 class="text-3xl font-bold underline">Welcome</h1>
-<p>Lorem Ipsum</p>
+<a th:href="@{/new}">Let's post!</a>
+<table>
+    <tr >
+        <th>id</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Deadline</th>
+        <th>Priority</th>
+    </tr>
+    <form method="post">
+        <tr th:each="issue:${issues}">
+            <td th:text="${issue.getId()}"></td>
+            <td th:text="${issue.getTitle()}"></td>
+            <td th:text="${issue.getContent()}"></td>
+            <td th:text="${issue.getDeadline()}"></td>
+            <td th:text="${issue.getPriority()}"></td>
+        </tr>
+    </form>
+</table>
 </body>
 </html>
