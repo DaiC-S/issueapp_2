@@ -6,24 +6,34 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-<a th:href="@{/new}">Let's post!</a>
-<table>
-    <tr >
-        <th>id</th>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Deadline</th>
-        <th>Priority</th>
-    </tr>
-    <form method="post">
-        <tr th:each="issue:${issues}">
-            <td th:text="${issue.getId()}"></td>
-            <td th:text="${issue.getTitle()}"></td>
-            <td th:text="${issue.getContent()}"></td>
-            <td th:text="${issue.getDeadline()}"></td>
-            <td th:text="${issue.getPriority()}"></td>
+<header class="w-full h-14 py-3 text-center bg-[#2c3e50]">
+    <a th:href="@{/}" class="text-xl text-white no-underline">IssueApp2</a>
+</header>
+<main class="w-full">
+    <div class="form_head w-[500px] py-12 my-0 mx-auto">
+        <h1 class="text-2xl font-bold text-center">Your issues are...</h1>
+    </div>
+    <div class="w-full pt-0 px-16 pb-10 flex justify-end">
+        <a th:href="@{/new}" class="block h-[40px] w-[100px] p-0.5 border border-solid border-[#2c3e50] rounded-md no-underline text-center color-[#2c3e50] text-lg font-bold">Let's post!</a>
+    </div>
+    <table class="w-[500px] py-8 px-5 my-0 mx-auto border-collapse">
+        <tr>
+            <th class="h-11 p-1 border border-solid border-[#2c3e50] overflow-hidden whitespace-nowrap bg-[#2c3e50] text-white">id</th>
+            <th class="h-11 p-1 border border-solid border-[#2c3e50] overflow-hidden whitespace-nowrap bg-[#2c3e50] text-white">Title</th>
+            <th class="h-11 min-w-[600px] p-1 border border-solid border-[#2c3e50] overflow-hidden whitespace-nowrap bg-[#2c3e50] text-white">Content</th>
+            <th class="h-11 p-1 border border-solid border-[#2c3e50] overflow-hidden whitespace-nowrap bg-[#2c3e50] text-white">Deadline</th>
+            <th class="h-11 p-1 border border-solid border-[#2c3e50] overflow-hidden whitespace-nowrap bg-[#2c3e50] text-white">Priority</th>
         </tr>
-    </form>
-</table>
+        <form method="post">
+            <tr th:each="issue:${issues}">
+                <td th:text="${issue.getId()}" class="h-11 p-1 border border-solid border-[#2c3e50] overflow-hidden whitespace-nowrap"></td>
+                <td th:text="${issue.getTitle()}" class="h-11 p-1 border border-solid border-[#2c3e50] overflow-hidden whitespace-nowrap"></td>
+                <td th:text="${issue.getContent()}" class="h-11 p-1 border border-solid border-[#2c3e50] overflow-hidden whitespace-nowrap"></td>
+                <td th:text="${issue.getDeadline()}" class="h-11 p-1 border border-solid border-[#2c3e50] overflow-hidden whitespace-nowrap"></td>
+                <td th:text="${issue.getPriority()}" class="h-11 p-1 border border-solid border-[#2c3e50] overflow-hidden whitespace-nowrap"></td>
+            </tr>
+        </form>
+    </table>
+</main>
 </body>
 </html>
