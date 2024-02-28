@@ -7,5 +7,5 @@ public class IssueForm {
     private String title;
     private String content;
     private String deadline;
-    private char priority;
+    private String priority;
 }

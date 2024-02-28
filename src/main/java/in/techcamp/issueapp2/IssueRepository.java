@@ -6,5 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface IssueRepository {
    @Insert("INSERT INTO issues (title, content, deadline, priority) VALUES(#{title}, #{content}, #{deadline}, #{priority})")
-   void insertIssues(String title, String content, String deadline, char priority);
+   void insertIssues(String title, String content, String deadline, String priority);
 }
